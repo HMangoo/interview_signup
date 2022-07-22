@@ -3,16 +3,18 @@ import 'package:gap/gap.dart';
 import 'package:interview_signup/utils/app_layout.dart';
 import 'package:interview_signup/utils/app_style.dart';
 
-class TextOneButton extends StatelessWidget {
-  TextOneButton(
+import 'option_button.dart';
+
+class TextMultiButton extends StatelessWidget {
+  TextMultiButton(
       {Key? key,
       required this.message,
-      required this.buttonMessage,
+      required this.buttonMessageList,
       this.isMinor = false})
       : super(key: key);
 
   final String message;
-  final String buttonMessage;
+  final String buttonMessageList;
   final bool isMinor;
 
   @override
@@ -40,22 +42,9 @@ class TextOneButton extends StatelessWidget {
                 style: Styles.questionStyle,
               ),
               Gap(AppLayout.getHeight(10)),
-              Center(
-                child: Container(
-                  padding:
-                      EdgeInsets.symmetric(vertical: AppLayout.getHeight(10)),
-                  width: AppLayout.getWidth(250),
-                  decoration: BoxDecoration(
-                      borderRadius:
-                          BorderRadius.circular(AppLayout.getHeight(12)),
-                      color: isMinor ? Styles.minorColor : Styles.spotColor),
-                  child: Center(
-                      child: Text(
-                    buttonMessage,
-                    style: Styles.questionStyle,
-                  )),
-                ),
-              ),
+              OptionButton(buttonMessage: ['대학교 재학', '대학교 졸업', '고등학교']),
+              Gap(AppLayout.getHeight(6)),
+              OptionButton(buttonMessage: ['대학교 재학', '대학교 졸업']),
             ],
           ),
         ),

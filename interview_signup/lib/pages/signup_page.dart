@@ -2,13 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:interview_signup/controller/text_form_controller.dart';
+import 'package:interview_signup/model/only_text_question.dart';
 import 'package:interview_signup/utils/app_layout.dart';
 import 'package:interview_signup/utils/app_style.dart';
+import 'package:interview_signup/utils/question.dart';
+
+import '../model/question_column.dart';
 
 class SignupPage extends StatelessWidget {
   SignupPage({Key? key}) : super(key: key);
 
   TextFormController textFormController = TextFormController();
+
+  Widget sibal() {
+    return OnlyText('earhearearg');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,16 +43,21 @@ class SignupPage extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: ListView(
-              children: [
-                Text(
-                  'raghear',
-                  style: Styles.questionStyle,
-                )
-              ],
+            // child: ListView(
+            //   children: question.map((quest) {
+            //     return quest;
+            //   }).toList(),
+            // ),
+            child: Obx(
+              () => ListView(
+                children: question[textFormController.index.value]
+                    .map((quest) => quest)
+                    .toList(),
+              ),
             ),
           ),
-          Container(
+          // Textformfield -> 나중에 위젯화.
+          Padding(
             padding: EdgeInsets.symmetric(
                 vertical: AppLayout.getHeight(8.0),
                 horizontal: AppLayout.getWidth(8.0)),
@@ -79,18 +92,14 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
                 Gap(AppLayout.getWidth(8.0)),
-                Obx(
-                  () => IconButton(
-                    onPressed:
-                        textFormController.userEnterMessage.value.trim().isEmpty
-                            ? null
-                            : () {
-                                textFormController.sendMessage(context);
-                              },
-                    icon: Icon(
-                      Icons.send,
-                      color: Styles.spotColor,
-                    ),
+                IconButton(
+                  onPressed: () {
+                    textFormController.sendMessage(context);
+                    textFormController.getAnswer();
+                  },
+                  icon: Icon(
+                    Icons.send,
+                    color: Styles.spotColor,
                   ),
                 ),
               ],
