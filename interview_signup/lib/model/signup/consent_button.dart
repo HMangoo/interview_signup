@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../utils/app_layout.dart';
-import '../utils/app_style.dart';
+import '../../utils/app_layout.dart';
+import '../../utils/app_style.dart';
 
 class ConsentButton extends StatelessWidget {
   const ConsentButton({Key? key, required this.title}) : super(key: key);

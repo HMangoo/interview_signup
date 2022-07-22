@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:interview_signup/controller/text_form_controller.dart';
-import 'package:interview_signup/model/only_text_question.dart';
+import 'package:interview_signup/model/signup/only_text_question.dart';
 import 'package:interview_signup/utils/app_layout.dart';
 import 'package:interview_signup/utils/app_style.dart';
 import 'package:interview_signup/utils/question.dart';
-
-import '../model/question_column.dart';
 
 class SignupPage extends StatelessWidget {
   SignupPage({Key? key}) : super(key: key);

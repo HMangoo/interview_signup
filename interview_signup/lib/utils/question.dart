@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:interview_signup/model/only_text_question.dart';
-import 'package:interview_signup/model/text_multi_button.dart';
-import 'package:interview_signup/model/text_two_button.dart';
+import 'package:interview_signup/model/signup/consent_button.dart';
 
-import '../model/consent_button.dart';
-import '../model/text_one_button.dart';
+import 'package:interview_signup/model/signup/only_text_question.dart';
+import 'package:interview_signup/model/signup/text_multi_button.dart';
+import 'package:interview_signup/model/signup/text_one_button.dart';
+import 'package:interview_signup/model/signup/text_two_button.dart';
+
 import 'app_layout.dart';
 import 'app_style.dart';
 

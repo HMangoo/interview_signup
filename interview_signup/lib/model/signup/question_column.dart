@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../controller/text_form_controller.dart';
-import '../utils/question.dart';
+import 'package:interview_signup/controller/text_form_controller.dart';
+import 'package:interview_signup/utils/question.dart';
 
 class QusetionColumn extends StatelessWidget {
   QusetionColumn({Key? key}) : super(key: key);
