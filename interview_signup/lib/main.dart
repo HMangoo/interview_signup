@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:interview_signup/pages/signup_page.dart';
 import 'package:interview_signup/utils/app_style.dart';
 
+import 'pages/capacity_page.dart';
+
 void main(List<String> args) {
   runApp(const MyApp());
 }
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(primaryColor: primary),
-      home: SignupPage(),
+      home: CapacityPage(),
     );
   }
 }
