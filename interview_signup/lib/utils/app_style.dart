@@ -25,4 +25,15 @@ class Styles {
     Color.fromRGBO(113, 143, 172, 1),
     Color.fromRGBO(178, 204, 240, 1)
   ], begin: Alignment.topRight, end: Alignment.bottomLeft);
+
+  // text
+  static TextStyle headLineStyle = TextStyle(
+    fontSize: 26,
+    color: primary,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle questionStyle = const TextStyle(
+    color: Colors.white,
+  );
 }
