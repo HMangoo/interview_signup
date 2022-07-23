@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+import 'package:interview_signup/pages/signup_page.dart';
 import 'package:interview_signup/utils/app_layout.dart';
 import 'package:interview_signup/utils/app_style.dart';
+
+import '../model/capacity/capacity_container.dart';
+import '../utils/capacity_info_list.dart';
 
 class CapacityPage extends StatelessWidget {
   const CapacityPage({Key? key}) : super(key: key);
@@ -38,284 +43,11 @@ class CapacityPage extends StatelessWidget {
                     fontSize: AppLayout.getHeight(16)),
               ),
               Gap(AppLayout.getHeight(20)),
-              Container(
-                margin: EdgeInsets.only(top: AppLayout.getHeight(10)),
-                height: AppLayout.getHeight(160),
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(color: Colors.grey),
-                    top: BorderSide(color: Colors.grey),
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: const [
-                        Text(
-                          '외모',
-                          textAlign: TextAlign.start,
-                        ),
-                      ],
-                    ),
-                    Gap(AppLayout.getHeight(10)),
-                    Row(
-                      children: [
-                        Image(
-                          image: AssetImage('assets/gold2.png'),
-                          width: AppLayout.getWidth(50),
-                          fit: BoxFit.fitWidth,
-                        ),
-                        Gap(AppLayout.getWidth(10)),
-                        Text(
-                          'Visual',
-                          style: TextStyle(fontSize: AppLayout.getHeight(20)),
-                        )
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Gap(AppLayout.getWidth(60)),
-                        Text(
-                          '비주얼 점수 4.5 +',
-                          style: TextStyle(
-                              fontSize: 12, color: Colors.grey.shade500),
-                        )
-                      ],
-                    ),
-                    Gap(AppLayout.getHeight(20)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Container(
-                          height: AppLayout.getHeight(30),
-                          padding: EdgeInsets.symmetric(
-                              vertical: AppLayout.getHeight(5),
-                              horizontal: AppLayout.getWidth(8)),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(
-                                  AppLayout.getHeight(15)),
-                              color: Colors.grey.shade400),
-                          child: Center(
-                            child: Row(
-                              children: [
-                                Image(
-                                  image: AssetImage('assets/gold2.png'),
-                                  height: AppLayout.getHeight(20),
-                                  fit: BoxFit.fitWidth,
-                                ),
-                                Gap(AppLayout.getWidth(3.0)),
-                                Text('Gold'),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Gap(AppLayout.getWidth(3.0)),
-                        Container(
-                          height: AppLayout.getHeight(30),
-                          padding: EdgeInsets.symmetric(
-                              vertical: AppLayout.getHeight(5),
-                              horizontal: AppLayout.getWidth(8)),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(
-                                  AppLayout.getHeight(15)),
-                              color: Colors.grey.shade400),
-                          child: Center(
-                            child: Row(
-                              children: [
-                                Image(
-                                  image: AssetImage('assets/gold2.png'),
-                                  height: AppLayout.getHeight(20),
-                                  fit: BoxFit.fitWidth,
-                                ),
-                                Gap(AppLayout.getWidth(3.0)),
-                                Text('Gold'),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Gap(AppLayout.getWidth(3.0)),
-                        Container(
-                          height: AppLayout.getHeight(30),
-                          padding: EdgeInsets.symmetric(
-                              vertical: AppLayout.getHeight(5),
-                              horizontal: AppLayout.getWidth(8)),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(
-                                  AppLayout.getHeight(15)),
-                              color: Colors.grey.shade400),
-                          child: Center(
-                            child: Row(
-                              children: [
-                                Image(
-                                  image: AssetImage('assets/gold2.png'),
-                                  height: AppLayout.getHeight(20),
-                                  fit: BoxFit.fitWidth,
-                                ),
-                                Gap(AppLayout.getWidth(3.0)),
-                                Text('Gold'),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: AppLayout.getHeight(10)),
-                height: AppLayout.getHeight(160),
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(color: Colors.grey),
-                    top: BorderSide(color: Colors.grey),
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: const [
-                        Text(
-                          '외모',
-                          textAlign: TextAlign.start,
-                        ),
-                      ],
-                    ),
-                    Gap(AppLayout.getHeight(10)),
-                    Row(
-                      children: [
-                        Image(
-                          image: AssetImage('assets/gold2.png'),
-                          width: AppLayout.getWidth(50),
-                          fit: BoxFit.fitWidth,
-                        ),
-                        Gap(AppLayout.getWidth(10)),
-                        Text(
-                          'Visual',
-                          style: TextStyle(fontSize: AppLayout.getHeight(20)),
-                        )
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Gap(AppLayout.getWidth(60)),
-                        Text(
-                          '비주얼 점수 4.5 +',
-                          style: TextStyle(
-                              fontSize: 12, color: Colors.grey.shade500),
-                        )
-                      ],
-                    ),
-                    Gap(AppLayout.getHeight(20)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Container(
-                          height: AppLayout.getHeight(30),
-                          padding: EdgeInsets.symmetric(
-                              vertical: AppLayout.getHeight(5),
-                              horizontal: AppLayout.getWidth(8)),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(
-                                  AppLayout.getHeight(15)),
-                              color: Colors.grey.shade400),
-                          child: Center(
-                            child: Row(
-                              children: [
-                                Image(
-                                  image: AssetImage('assets/gold2.png'),
-                                  height: AppLayout.getHeight(20),
-                                  fit: BoxFit.fitWidth,
-                                ),
-                                Gap(AppLayout.getWidth(3.0)),
-                                Text('Gold')
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: AppLayout.getHeight(10)),
-                height: AppLayout.getHeight(160),
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(color: Colors.grey),
-                    top: BorderSide(color: Colors.grey),
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: const [
-                        Text(
-                          '외모',
-                          textAlign: TextAlign.start,
-                        ),
-                      ],
-                    ),
-                    Gap(AppLayout.getHeight(10)),
-                    Row(
-                      children: [
-                        Image(
-                          image: AssetImage('assets/gold2.png'),
-                          width: AppLayout.getWidth(50),
-                          fit: BoxFit.fitWidth,
-                        ),
-                        Gap(AppLayout.getWidth(10)),
-                        Text(
-                          'Visual',
-                          style: TextStyle(fontSize: AppLayout.getHeight(20)),
-                        )
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Gap(AppLayout.getWidth(60)),
-                        Text(
-                          '비주얼 점수 4.5 +',
-                          style: TextStyle(
-                              fontSize: 12, color: Colors.grey.shade500),
-                        )
-                      ],
-                    ),
-                    Gap(AppLayout.getHeight(20)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Container(
-                          height: AppLayout.getHeight(30),
-                          padding: EdgeInsets.symmetric(
-                              vertical: AppLayout.getHeight(5),
-                              horizontal: AppLayout.getWidth(8)),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(
-                                  AppLayout.getHeight(15)),
-                              color: Colors.grey.shade400),
-                          child: Center(
-                            child: Row(
-                              children: [
-                                Image(
-                                  image: AssetImage('assets/gold2.png'),
-                                  height: AppLayout.getHeight(20),
-                                  fit: BoxFit.fitWidth,
-                                ),
-                                Gap(AppLayout.getWidth(3.0)),
-                                Text('Gold')
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
+              Column(
+                children: capacityList
+                    .map((singleCapacity) =>
+                        CapacityContainer(capacity: singleCapacity))
+                    .toList(),
               ),
               SizedBox(height: AppLayout.getHeight(60))
             ],
@@ -328,20 +60,23 @@ class CapacityPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                     vertical: AppLayout.getHeight(8.0),
                     horizontal: AppLayout.getWidth(12.0)),
-                child: Container(
-                  width: double.maxFinite,
-                  height: double.maxFinite,
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius:
-                          BorderRadius.circular(AppLayout.getHeight(10.0))),
-                  child: Center(
-                    child: Text(
-                      '다 확인했어요',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: AppLayout.getHeight(16.0),
-                          color: Colors.white),
+                child: InkWell(
+                  onTap: () => Get.to(SignupPage()),
+                  child: Container(
+                    width: double.maxFinite,
+                    height: double.maxFinite,
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius:
+                            BorderRadius.circular(AppLayout.getHeight(10.0))),
+                    child: Center(
+                      child: Text(
+                        '다 확인했어요',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: AppLayout.getHeight(16.0),
+                            color: Colors.white),
+                      ),
                     ),
                   ),
                 )),
