@@ -4,7 +4,7 @@ import 'package:interview_signup/utils/app_layout.dart';
 import 'package:interview_signup/utils/app_style.dart';
 
 class TextOneButton extends StatelessWidget {
-  TextOneButton(
+  const TextOneButton(
       {Key? key,
       required this.message,
       required this.buttonMessage,

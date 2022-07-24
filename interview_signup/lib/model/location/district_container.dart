@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interview_signup/pages/signup_page.dart';
 
 import '../../utils/app_layout.dart';
 import '../../utils/app_style.dart';

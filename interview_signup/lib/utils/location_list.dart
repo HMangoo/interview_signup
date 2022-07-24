@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 List<String> locationList = [
   '인천',
   '대전',

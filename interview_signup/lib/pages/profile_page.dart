@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:interview_signup/pages/signup_page.dart';
 import 'package:interview_signup/utils/app_layout.dart';
 import 'package:interview_signup/utils/app_style.dart';
 import '../model/profile/image_box.dart';
@@ -11,7 +10,6 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,

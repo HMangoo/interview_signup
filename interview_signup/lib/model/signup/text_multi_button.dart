@@ -6,7 +6,7 @@ import 'package:interview_signup/utils/app_style.dart';
 import 'option_button.dart';
 
 class TextMultiButton extends StatelessWidget {
-  TextMultiButton(
+  const TextMultiButton(
       {Key? key,
       required this.message,
       required this.buttonMessageList,
@@ -42,9 +42,9 @@ class TextMultiButton extends StatelessWidget {
                 style: Styles.questionStyle,
               ),
               Gap(AppLayout.getHeight(10)),
-              OptionButton(buttonMessage: ['대학교 재학', '대학교 졸업', '고등학교']),
+              OptionButton(buttonMessage: const ['대학교 재학', '대학교 졸업', '고등학교']),
               Gap(AppLayout.getHeight(6)),
-              OptionButton(buttonMessage: ['대학교 재학', '대학교 졸업']),
+              OptionButton(buttonMessage: const ['대학교 재학', '대학교 졸업']),
             ],
           ),
         ),

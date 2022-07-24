@@ -9,6 +9,7 @@ import 'package:interview_signup/utils/location_list.dart';
 
 import '../model/location/district_container.dart';
 
+// ignore: must_be_immutable
 class SelectLocation extends StatelessWidget {
   SelectLocation({Key? key}) : super(key: key);
 

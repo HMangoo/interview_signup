@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 import '../../utils/app_layout.dart';
 import '../../utils/app_style.dart';
 
+// ignore: must_be_immutable
 class OptionButton extends StatelessWidget {
   OptionButton({
     Key? key,

@@ -6,6 +6,7 @@ import 'package:interview_signup/controller/capacity_select_controller.dart';
 import '../../utils/app_layout.dart';
 import 'capacity_select_container.dart';
 
+// ignore: must_be_immutable
 class CapacityContainer extends StatelessWidget {
   CapacityContainer({Key? key, required this.capacity}) : super(key: key);
 

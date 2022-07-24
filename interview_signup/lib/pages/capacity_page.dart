@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:interview_signup/pages/signup_page.dart';
 import 'package:interview_signup/utils/app_layout.dart';
 import 'package:interview_signup/utils/app_style.dart';
 

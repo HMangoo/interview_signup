@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:get/get.dart';
 import 'package:interview_signup/controller/text_form_controller.dart';
 import 'package:interview_signup/utils/app_layout.dart';
 import 'package:interview_signup/utils/app_style.dart';
 
+// ignore: must_be_immutable
 class TextTwoButton extends StatelessWidget {
   TextTwoButton({
     Key? key,

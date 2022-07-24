@@ -21,10 +21,11 @@ class _ConsentButtonState extends State<ConsentButton> {
     return GestureDetector(
       onTap: () {
         setState(() {
-          if (_tapped == false)
+          if (_tapped == false) {
             _tapped = true;
-          else
+          } else {
             _tapped = false;
+          }
         });
       },
       child: Container(

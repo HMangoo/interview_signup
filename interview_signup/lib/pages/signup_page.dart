@@ -7,18 +7,18 @@ import 'package:interview_signup/utils/app_layout.dart';
 import 'package:interview_signup/utils/app_style.dart';
 import 'package:interview_signup/utils/question.dart';
 
+// ignore: must_be_immutable
 class SignupPage extends StatelessWidget {
   SignupPage({Key? key}) : super(key: key);
 
   TextFormController textFormController = TextFormController();
 
   Widget sibal() {
-    return OnlyText('earhearearg');
+    return const OnlyText('earhearearg');
   }
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize(context);
     return Scaffold(
       backgroundColor: Styles.primaryColor,
       appBar: AppBar(

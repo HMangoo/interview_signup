@@ -28,14 +28,12 @@ class EmblemElement extends StatelessWidget {
                 right: AppLayout.getWidth(5),
                 child: Transform.rotate(
                   angle: 340 * math.pi / 180, // 45 부분이 원하는 각도
-                  child: Container(
-                    child: Text(
-                      "BLIND",
-                      style: TextStyle(
-                          fontSize: 40,
-                          color: Colors.blueGrey,
-                          fontWeight: FontWeight.w900),
-                    ),
+                  child: const Text(
+                    "BLIND",
+                    style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.blueGrey,
+                        fontWeight: FontWeight.w900),
                   ),
                 ),
               ),
@@ -48,7 +46,7 @@ class EmblemElement extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(tear['id']),
-                        Container(
+                        SizedBox(
                           height: AppLayout.getHeight(60),
                           width: AppLayout.getWidth(160),
                           child: Text(

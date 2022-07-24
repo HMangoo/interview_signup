@@ -8,6 +8,7 @@ import 'package:interview_signup/model/signup/only_text_question.dart';
 import 'package:interview_signup/model/signup/text_multi_button.dart';
 import 'package:interview_signup/model/signup/text_one_button.dart';
 import 'package:interview_signup/model/signup/text_two_button.dart';
+import 'package:interview_signup/pages/emblem_page.dart';
 import 'package:interview_signup/pages/profile_page.dart';
 
 import '../pages/capacity_page.dart';
@@ -121,28 +122,12 @@ List<List<Widget>> question = [
     ),
   ],
   [
-    const OnlyText('좋아요! 이제 당신만 접속할 수 있는 계정을 만들거에요'),
-    const OnlyText('주로 사용하는 이메일 주소를 알려주세요'),
-  ],
-  [
-    TextTwoButton(
-      message: '제대로 입력했는지 확 번 더 확인해주세요',
-      buttonMessage1: '정확해요!',
-      buttonMessage2: '다시 입력할래요',
-      onClick: () {},
-    )
-  ],
-  [const OnlyText('이번엔 비밀번호를 몰래 입력해주세요')],
-  [const OnlyText('제대로 입력했는지 확인해볼까요?')],
-  [const OnlyText('비밀번호가 일치하지 않아요. 처음부터 다시 입력해주세요')],
-  [const OnlyText('제대로 입력했는지 확인해볼까요?')],
-  [
     const OnlyText('정확해요!\n이제 자신있는 매력을 인증해야 해요. 신뢰할 수 있는 만남을 위해서는 필수에요'),
     TextOneButton(
         message: '블라인드 표시가 된 엠블럼을 신청할 경우, 프로필 사진 없이 가입이 가능하다는 것도 잊지 마세요',
         buttonMessage: '엠블럼 다시보기',
         onClick: () {
-          Get.to(() => CapacityPage());
+          Get.to(() => const CapacityPage());
         },
         isMinor: true),
     TextTwoButton(
@@ -150,7 +135,7 @@ List<List<Widget>> question = [
         buttonMessage1: '비주얼 심사',
         buttonMessage2: '서류 심사',
         onClick: () {
-          Get.to(() => ProfilePage());
+          Get.to(() => const ProfilePage());
         },
         isMinor2: false)
   ],
@@ -160,7 +145,9 @@ List<List<Widget>> question = [
     TextOneButton(
       message: '안내에 따라 당신의 능력을 자랑할 수 있는 엠블럼을 신청해주세요',
       buttonMessage: '엠블럼 신청하기',
-      onClick: () {},
+      onClick: () {
+        Get.to(() => const EmblemPage());
+      },
     )
   ],
   [
@@ -193,5 +180,8 @@ List<List<Widget>> question = [
         buttonMessage2: '다시 입력할래요',
         onClick: () {})
   ],
-  [TextMultiButton(message: '최종학력은 어떻게 되시나요>', buttonMessageList: '대학교 재학')],
+  [
+    const TextMultiButton(
+        message: '최종학력은 어떻게 되시나요?', buttonMessageList: '대학교 재학')
+  ],
 ];
