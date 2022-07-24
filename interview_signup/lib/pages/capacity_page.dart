@@ -61,7 +61,7 @@ class CapacityPage extends StatelessWidget {
                     vertical: AppLayout.getHeight(8.0),
                     horizontal: AppLayout.getWidth(12.0)),
                 child: InkWell(
-                  onTap: () => Get.to(() => SignupPage()),
+                  onTap: () => Get.back(),
                   child: Container(
                     width: double.maxFinite,
                     height: double.maxFinite,

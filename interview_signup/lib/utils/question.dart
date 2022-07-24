@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:interview_signup/controller/signup_controller.dart';
 import 'package:interview_signup/model/signup/consent_button.dart';
 
 import 'package:interview_signup/model/signup/only_text_question.dart';
@@ -8,13 +9,14 @@ import 'package:interview_signup/model/signup/text_multi_button.dart';
 import 'package:interview_signup/model/signup/text_one_button.dart';
 import 'package:interview_signup/model/signup/text_two_button.dart';
 import 'package:interview_signup/pages/profile_page.dart';
-import 'package:interview_signup/utils/location_list.dart';
 
 import '../pages/capacity_page.dart';
 import '../pages/permission_page.dart';
 import '../pages/select_location_page.dart';
 import 'app_layout.dart';
 import 'app_style.dart';
+
+SignUpController signUpController = SignUpController();
 
 List<List<Widget>> question = [
   [
@@ -23,7 +25,9 @@ List<List<Widget>> question = [
     TextOneButton(
       message: '어렵지 않으니 잘 따라와주세요!',
       buttonMessage: '네, 알겠어요!',
-      onClick: () {},
+      onClick: () {
+        signUpController.question1();
+      },
     ),
   ],
   [
@@ -137,7 +141,9 @@ List<List<Widget>> question = [
     TextOneButton(
         message: '블라인드 표시가 된 엠블럼을 신청할 경우, 프로필 사진 없이 가입이 가능하다는 것도 잊지 마세요',
         buttonMessage: '엠블럼 다시보기',
-        onClick: () {},
+        onClick: () {
+          Get.to(() => CapacityPage());
+        },
         isMinor: true),
     TextTwoButton(
         message: '외모에 자신 있다면 비주얼 심자를, 능력에 자신 있다면 서류 심사를 선택해주세요!',

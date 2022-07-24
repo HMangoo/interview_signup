@@ -17,7 +17,7 @@ class DistrictContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.to(() => SignupPage());
+        Get.back();
       },
       child: Container(
         padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(8)),

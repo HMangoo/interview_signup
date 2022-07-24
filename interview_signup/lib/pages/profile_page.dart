@@ -74,7 +74,7 @@ class ProfilePage extends StatelessWidget {
                   EdgeInsets.symmetric(horizontal: AppLayout.getWidth(12.0)),
               child: InkWell(
                 onTap: () {
-                  Get.to(() => SignupPage());
+                  Get.back();
                 },
                 child: Container(
                   width: double.maxFinite,

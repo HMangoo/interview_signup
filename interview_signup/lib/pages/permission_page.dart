@@ -88,12 +88,12 @@ class PermissionPage extends StatelessWidget {
     var status = await Permission.camera.status;
     if (status.isGranted) {
       print('Permission is granted');
-      Get.to(() => SignupPage());
+      Get.back();
     } else if (status.isDenied) {
       openAppSettings();
       if (await Permission.camera.request().isGranted) {
         print('Permission was granted');
-        Get.to(() => SignupPage());
+        Get.back();
       }
     }
   }
