@@ -8,12 +8,14 @@ class TextOneButton extends StatelessWidget {
       {Key? key,
       required this.message,
       required this.buttonMessage,
+      required this.onClick,
       this.isMinor = false})
       : super(key: key);
 
   final String message;
   final String buttonMessage;
   final bool isMinor;
+  final VoidCallback onClick;
 
   @override
   Widget build(BuildContext context) {
@@ -41,19 +43,22 @@ class TextOneButton extends StatelessWidget {
               ),
               Gap(AppLayout.getHeight(10)),
               Center(
-                child: Container(
-                  padding:
-                      EdgeInsets.symmetric(vertical: AppLayout.getHeight(10)),
-                  width: AppLayout.getWidth(250),
-                  decoration: BoxDecoration(
-                      borderRadius:
-                          BorderRadius.circular(AppLayout.getHeight(12)),
-                      color: isMinor ? Styles.minorColor : Styles.spotColor),
-                  child: Center(
-                      child: Text(
-                    buttonMessage,
-                    style: Styles.questionStyle,
-                  )),
+                child: InkWell(
+                  onTap: onClick,
+                  child: Container(
+                    padding:
+                        EdgeInsets.symmetric(vertical: AppLayout.getHeight(10)),
+                    width: AppLayout.getWidth(250),
+                    decoration: BoxDecoration(
+                        borderRadius:
+                            BorderRadius.circular(AppLayout.getHeight(12)),
+                        color: isMinor ? Styles.minorColor : Styles.spotColor),
+                    child: Center(
+                        child: Text(
+                      buttonMessage,
+                      style: Styles.questionStyle,
+                    )),
+                  ),
                 ),
               ),
             ],

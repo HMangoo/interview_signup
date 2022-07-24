@@ -11,6 +11,7 @@ class TextTwoButton extends StatelessWidget {
     required this.message,
     required this.buttonMessage1,
     required this.buttonMessage2,
+    required this.onClick,
     this.isMinor1 = false,
     this.isMinor2 = true,
   }) : super(key: key);
@@ -20,6 +21,7 @@ class TextTwoButton extends StatelessWidget {
   final String buttonMessage2;
   final bool isMinor1;
   final bool isMinor2;
+  final VoidCallback onClick;
   TextFormController textFormController = TextFormController();
 
   @override
@@ -47,18 +49,21 @@ class TextTwoButton extends StatelessWidget {
                 style: Styles.questionStyle,
               ),
               Gap(AppLayout.getHeight(10)),
-              Container(
-                padding:
-                    EdgeInsets.symmetric(vertical: AppLayout.getHeight(10)),
-                width: AppLayout.getWidth(250),
-                decoration: BoxDecoration(
-                    borderRadius:
-                        BorderRadius.circular(AppLayout.getHeight(12)),
-                    color: isMinor1 ? Styles.minorColor : Styles.spotColor),
-                child: Center(
-                  child: Text(
-                    buttonMessage1,
-                    style: Styles.questionStyle,
+              InkWell(
+                onTap: onClick,
+                child: Container(
+                  padding:
+                      EdgeInsets.symmetric(vertical: AppLayout.getHeight(10)),
+                  width: AppLayout.getWidth(250),
+                  decoration: BoxDecoration(
+                      borderRadius:
+                          BorderRadius.circular(AppLayout.getHeight(12)),
+                      color: isMinor1 ? Styles.minorColor : Styles.spotColor),
+                  child: Center(
+                    child: Text(
+                      buttonMessage1,
+                      style: Styles.questionStyle,
+                    ),
                   ),
                 ),
               ),
