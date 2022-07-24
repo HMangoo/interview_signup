@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:interview_signup/pages/permission_page.dart';
+import 'package:interview_signup/pages/select_location.dart';
 import 'package:interview_signup/pages/signup_page.dart';
 import 'package:interview_signup/utils/app_style.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(primaryColor: primary),
-      home: PermissionPage(),
+      home: SelectLocation(),
     );
   }
 }
