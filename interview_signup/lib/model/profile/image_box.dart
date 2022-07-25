@@ -34,7 +34,7 @@ class _ImageBoxState extends State<ImageBox> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => pickImage,
+      onTap: () => pickImage(),
       child: Container(
         height: AppLayout.getHeight(widget.size),
         width: AppLayout.getWidth(widget.size),
